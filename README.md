@@ -1,5 +1,5 @@
 # Analyzing-Traffic-Patterns-by-Time-and-Source
-This project analyzed customer demographics, traffic patterns, and website conversion rates for an online retail store. 
+This project analyzed customer demographics, traffic patterns, and website conversion rates of **BrightCart** Online Retail store. 
 <p align="center">
   <img src="assets/Cover.png" width="1000" />
 </p>
@@ -9,104 +9,71 @@ This project analyzed customer demographics, traffic patterns, and website conve
 
 
 ## Business Overview
-**Unity Bank** is a financial services institution operating across multiple European markets, including France, Germany, and Spain. The bank serves a diverse customer base with varying financial profiles, credit quality, and engagement levels. It also offers a variety of banking products across consumer and business segments. As part of its digital transformation and customer-centric strategy, the bank aims to strengthen data-driven decision-making across customer engagement, financial performance, and operational risk management.
+**BrightCart Online Retail** is a rapidly growing e-commerce company that offers a wide range of products, including **consumer electronics, home goods, and lifestyle items.** Established in 2010 by a team of technology entrepreneurs, the company is dedicated to providing a smooth and convenient online shopping experience through **personalized product recommendations, competitive pricing, and efficient delivery services.**
 
-To support data‑driven decision-making, Unity Bank implemented a PowerBI analytics solution focused on **customer behavior, churn risk, financial exposure, and portfolio performance**. The dashboards enable stakeholders to monitor customer retention, identify high-risk and high-value customers, analyze churn drivers, and evaluate how customer demographics, credit profiles, and product usage influence churn.
+By leveraging digital innovation and data-driven decision-making, BrightCart focuses on **improving customer engagement, increasing conversion rates**, and **maintaining a strong competitive position** in the evolving online retail industry.
 
 
 ---
 
 
 ## Business Problem 
-As competition in the banking sector intensifies and customer switching costs increase, **Unity Bank** faces growing pressure to retain customers, protect high-value balances, and proactively manage churn risk.
+**BrightCart** faces noticeable fluctuations in website traffic and conversion performance, making it challenging to effectively optimize marketing strategies and customer engagement.
 
-**1. High Customer Churn with Significant Financial Impact**
-- The bank is experiencing a churn rate of over 20%, resulting in the loss of 2,037 customers.
-- Churned customers account for approximately $186M in lost balances, posing a serious threat to revenue stability.
+**1.Traffic Timing Uncertainty**
+- Limited visibility into peak user activity hours makes it difficult to schedule promotions, email campaigns, and website updates at the most effective times.
 
-**2. Loss of High-Value Customers**
-- The high-value churn rate (~25%) indicates that customers with substantial balances are leaving at a disproportionate rate.
-- Average churned balances are higher than retained balances, increasing financial exposure.
+**2. Traffic Source Performance**
+- Insufficient insight into how different acquisition channels, such as organic search, paid advertising, social media, and referrals, contribute to overall traffic and conversions.
 
-**3. Inactivity as a Major Churn Driver**
-- A large share of churn originates from inactive customers, highlighting poor engagement and weak lifecycle management.
-- The bank lacks early-warning indicators to intervene before customers disengage.
+**3. Conversion Optimization**
+- Periods of high traffic with low purchase intent result in reduced conversion efficiency and potential waste of marketing resources.
 
-**4. Geographic Concentration of Churn Risk**
-- Certain regions (notably Germany) show significantly higher churn rates and churned balances.
-- Regional performance disparities make it difficult to deploy uniform retention strategies.
-
-**5. Low Product Penetration and Weak Customer Stickiness**
-- Most customers hold only one product, increasing churn susceptibility.
-- Customers with fewer products show higher churn likelihood compared to multi-product customers.
-
-**6. Underestimated Risk in Medium-Risk Customers**
-- The majority of churned balances come from customers classified as Medium Risk, not High Risk.
-- This indicates gaps in the bank’s churn risk classification and prioritization logic.
+**4. Customer Behavior Insights**
+- A lack of detailed understanding of user interaction patterns restricts the company’s ability to implement effective personalization and targeted marketing strategies.
 
 
 ---
 
 
 ## Project Objectives
-The PowerBI project was designed to achieve the following objectives:
+This Excel project was designed to achieve the following objectives:
 
-**1. Provide a Unified View of Customer Churn and Risk**
-- Develop interactive dashboards that track churn rate, churned balances, risk tiers, and customer activity status in real time.
+**1. Identify Peak Traffic Periods**
+- Analyze user activity by hour to determine the optimal timing for promotions and campaigns.
 
-**2. Identify High-Risk and High-Value Customers**
-- Enable business users to quickly isolate customers who combine high balances with elevated churn risk for proactive intervention.
+**2. Evaluate Traffic Sources**
+- Assess the performance of channels such as organic search, paid ads, social media, and referrals.
 
-**3. Analyze Churn Drivers Across Key Dimensions**
+**3. Improve Conversion Efficiency**
+- Identify periods of high traffic but low conversions to optimize marketing efforts.
 
-Assess churn patterns by:
-- Geography
-- Age group
-- Credit score band
-- Product usage
-- Active vs. inactive status
+**4. Understand Customer Behavior**
+- Examine user interaction patterns to support targeted marketing and personalization.
 
-**4. Support Targeted Retention Strategies**
-
-Equip relationship managers and marketing teams with insights to design segment-specific retention actions, especially for:
-- Medium-risk customers
-- Inactive customers
-- Single-product customers
-- Older age segments (45+)
-
-**5. Improve Financial Risk Visibility**
-- Quantify the financial exposure of churn by risk tier and customer segment.
-- Shift focus from churn volume alone to churn value impact.
-
-**6. Enable Customer-Level Monitoring**
-- Provide a customer portfolio view to track individual balances, credit scores, risk tiers, and churn status.
-- Support operational decision-making at both strategic and tactical levels.
+**5. Enable Data-Driven Decisions**
+- Provide insights and dashboards to support strategic marketing and business decisions.
 
 
 ---
 
 
 ## Data Dictionary and Modelling
-- **CustomerID:** Unique customer identifier
-- **Surname:** Customer full name (for identification in the portfolio view)
-- **CreditScore:** Actual credit score used for segmentation 
-- **Geography:** Country of customer (France, Germany, Spain)
-- **Gender:** Customer gender (Male, Female)
-- **Age:** Exact age of customer
-- **Tenure:** How long they have been using the banking service(s)
-- **Balance:** Current total account balance held by the customer
-- **NumOfProducts:** Number of bank products held by the customer (1–4)
-- **HasCrCard:** Indicates if the customer has a credit card (Yes/No)
-- **IsActiveMembers:** Indicates if the customer is currently active or inactive
-- **EstimatedSalary:** Customer's annual salary
-- **Exited:** Indicates if the customer has churned (Yes/No)
-- **Age Group:** Customer age category (<25, 25–34, 35–44, 45–54, 55+)
-- **CreditScore Band:** Customer credit score range (Poor, Fair, Good, Very Good, Excellent)
-- **Churn Risk Score:** Scored risk level (e.g., 0–4 scale) for finer segmentation
-- **Balance Band:** Categorized balance ranges (e.g., Low < $50K, Medium $50K–100K, etc.)
-- **Churn Risk Tier:** Risk level assigned based on customer behavior or model (Low, Medium, High)
+- **Session_ID:** Unique identifier for each website session
+- **User_ID:** Unique identifier for each visitor or customer
+- **Timestamp:** Date and time of the session
+- **Time_of_Day:** Derived from Timestamp; indicates morning, afternoon, evening, or hour of the session
+- **Traffic_Source:** Origin of the traffic (e.g., Organic, Paid, Social, Email, Referral, Direct)
+- **Device_Type:** Type of device used (Desktop, Mobile, Tablet)
+- **Location:** Geographic location of the user (City/Region)
+- **Conversion_Flag:** Indicates if the session led to a purchase (1 = Yes, 0 = No)
+- **User_Age:** Age of the user/visitor
+- **User_Gender:** Gender of the user/visitor
+- **Purchase_History_Count:** Total number of past purchases by the user
+- **Page_Views** Number of pages viewed during the session
+- **User Type:** New or Returning Users
 <p align="center">
-  <img src="assets/Data_Modelling.png" width="1000" />
+  <img src="assets/Data Model.png" width="1000" />
 </p>
 
 
@@ -114,340 +81,300 @@ Equip relationship managers and marketing teams with insights to design segment-
 
 
 ## Approach & Methodology
-This project was developed entirely using **Microsoft PowerBI**, covering the full analytics workflow — from data cleaning and transformation to modeling, analysis, and visualization. The objective was to analyze customer behavior, churn risk, and portfolio insights using an integrated and interactive PowerBI dashboard solution.
-### 1️⃣ Data Cleaning & Transformation (Power BI Power Query)
-- Imported raw customer data into **Power BI** using Power Query Editor
-- Performed data cleaning and transformation directly in Power BI:
-  - Removed duplicates and filtered invalid or missing entries
-  - Renamed columns and standardized field formats (e.g., text, numeric, dates)
-  - Created **calculated columns** for:
-    - `Age Group` (e.g., <25, 25–34, 35–44, etc.)
-    - `Credit Score Band` (e.g., Poor, Fair, Good, etc.)
-    - `Balance Band` (e.g., Low < $50K, Medium, High, Very High)
-    - `Churn Risk Tier` (Low, Medium, High)
-    - `Churn Risk Score` (0,1,2,3,4,5)
-  - Ensured consistency and data quality for downstream modeling
+This project was developed with Microsoft Excel.
+### 1. Data Cleaning & Transformation (Excel Power Query)
+- Imported raw customer data into
+- Performed data cleaning and transformation:
+  - removed duplicates and filtered invalid or missing entries
+  - renamed columns and standardized field formats (e.g., text, numeric, dates)
+- Ensured consistency and data quality for downstream modeling
+- Created **calculated tables and columns** for data normaization and modelling
+ 
+### 2. DAX Measures (Power Pivot)
+- Created calculated fields to support key metrics and business logic
+- Applied dimensions and calculated measures to support dynamic and filter-aware analysis across year, user type, traffic channel, and location.
 
-### 2️⃣ DAX Measures (Power BI)
-- Created **custom DAX measures** to support key metrics and business logic, including:
-  - `Churn Rate`, `Total Customers`, `Churned Balance`, `Average Churned Balance`, `Average Retained Balance`, etc
-- Used **DAX functions** such as:
-  - `CALCULATE`, `FILTER`, `DIVIDE`, `AVERAGEX`, `IF`, `VAR`, `COUNTROWS`, `DISTINCTCOUNT`, etc
-- Applied calculated measures to support dynamic and filter-aware analysis across customer segments
+### 3. Interactive Visualization & Dashboard Design (Excel Pivot Table & Worksheet)
+- Developed a comprehensive suite of interactive dashboards using Excel Dashboard
 
-### 3️⃣ Interactive Visualization & Dashboard Design (Power BI)
-Developed a comprehensive suite of interactive dashboards using **Power BI Desktop**
-
-**Visualization Techniques:**
-- Used card visuals, bar/column charts, donut charts, heatmaps, and filters/slicers
-- Enabled interactive drill-downs by age, region, churn status, and risk score
-
-### 4️⃣ Insight Generation & Business Alignment
-- Identified key customer behavior patterns
-- Translated findings into **actionable business recommendations**
+### 4. Insight Generation & Business Alignment
+- Identified key customer behavior patterns, traffic timing, website visits, and conversion rate
+- Translated findings into actionable business recommendations
 
 
 ---
 
-🔗 [View the Live Dashboard](https://bit.ly/UnityBank_Customer_Churn_Risk)
 
-## 🔢 Customer Overview
+## 📊 Traffic Timing and Conversion Overview
+<p align="center">
+  <img src="assets/Con-Dash.png" width="1000" />
+</p>
+
+### Top KPIs (Key Performance Indicators)
+- Total Users: 500
+- Total website Visits: 1079
+- Conversion Efficiency: 447 sessions
+- Conversion Rate: 41.43%
+- Top Converting Hour: 10:00 AM (51.28%)
+- Average Session Duration: 3.15 mins
+
+### Traffic Source Performance
+**Key Insight**
+- Organic Search and Direct channels generate the highest session volumes (366 and 346) while maintaining strong conversion rates (~43%)
+- In contrast, Paid Ads and Social Media contribute significantly lower traffic and conversions
+- Referrals generate a high conversion rate of 41% with a low traffic of 136 sessions
+  
+**Business Implication**
+
+Marketing resources may be disproportionately allocated to lower-performing acquisition channels.
+
+**Recommendation**
+- Prioritize investment in SEO and organic content strategies
+- Strengthen initiatives that drive direct traffic
+- Optimize paid advertising through improved targeting and creative performance
+
+**Expected Impact**
+- Improved marketing efficiency, stronger ROI on acquisition channels, and more sustainable traffic growth.
+<p align="center">
+  <img src="assets/Con-Tra.png" width="1000" />
+</p>
+
+## Website Page Interaction
+**Key Insight**
+- The Order Confirmation page records the highest visits (447), followed by the Home Page (256), Product Listing (172), and Checkout (131).
+- Product Detail pages show the lowest engagement (73), indicating limited interaction with product information before purchase.
+
+**Business Implication**
+
+Low engagement with product pages suggests missed opportunities to influence purchase decisions, while potential friction in the checkout process may hinder conversion efficiency.
+
+**Recommendation**
+- Enhance product discovery with stronger call-to-action elements, improved product visuals, and quick-view features
+- Optimize product detail pages by highlighting reviews, ratings, and promotions
+- Streamline the checkout experience through simplified steps, guest checkout options, and transparent shipping costs
+
+**Expected Impact**
+
+Improved conversion rates and an estimated revenue uplift of up to 20% by maximizing value from existing traffic.
+<p align="center">
+  <img src="assets/Con-pg.png" width="1000" />
+</p>
+
+### Device Behaviour
+**Key Insight**
+- Mobile generates the highest traffic and conversion efficiency (627 and 252)
+- However, the desktop conversion rate remains slightly higher
+
+**Business Implication**
+
+Mobile users represent the largest opportunity for conversion optimization.
+
+**Recommendation**
+- Improve mobile checkout experience and page speed
+- Simplify mobile purchase flows
+- Optimize mobile product pages and CTAs
+
+**Expected Impact**
+- Increased mobile conversion rates
+- Higher overall sales volume
+<p align="center">
+  <img src="assets/Con-Dev.png" width="1000" />
+</p>
+
+## Conversion Rate VS Traffic Timing
+**Key Insight**
+- Strong session volumes are occurring during early morning and evening periods
+- However, some high-traffic hours (>=50 sessions) show a lower conversion rate (<40%), indicating missed opportunities. E.g., 5 am, 12 pm, 2 pm, 6 pm, and 7 pm.
+
+**Business Implication**
+
+Marketing activities are not currently aligned with the highest purchase-intent windows, reducing campaign effectiveness.
+
+**Recommendation**
+- Schedule email campaigns, flash sales, and promotional banners between 9 AM and 11 AM, where conversion probability is highest.
+- Use behavior-triggered messaging (cart reminders, personalized offers) during low-conversion periods
+- Align inventory updates and website refreshes before peak hours to capture purchase intent
+
+**Expected Impact**
+- Higher campaign ROI
+- Improved conversion by 25% during peak traffic windows
+- Better utilization of marketing spend
+<p align="center">
+  <img src="assets/Con-Time.png" width="1000" />
+</p>
+
+## Customer Segment Behavior
+**Key Insight**
+- Returning users represent 54% of traffic, indicating strong customer loyalty
+- New users account for 46%, showing healthy acquisition
+
+**Business Implication**
+- Returning users present a high-value segment for retention and upselling
+
+**Recommendation**
+- Introduce loyalty rewards and personalized offers for returning customers
+- Use behavioral targeting for new visitors to accelerate first purchase
+
+**Expected Impact**
+- Improved customer lifetime value
+- Increased repeat purchases
+<p align="center">
+  <img src="assets/Con-Vty.png" width="1000" />
+</p>
+
+## Geographic Performance
+**Key Insight**
+- Canada generates the highest traffic volume (406 sessions)
+- The United Kingdom shows the highest conversion rate (44%)
+- USA conversion is slightly lower (39%)
+
+**Business Implication**
+
+Different markets show varying purchase behavior and potential for growth.
+
+**Recommendation**
+- Prioritize conversion optimization strategies in the USA
+- Expand marketing campaigns in the UK, where purchase intent is strongest
+- Maintain strong engagement strategies in Canada due to high traffic volume.
+
+**Expected Impact**
+- Better geographic marketing allocation
+- Higher international sales performance
+<p align="center">
+  <img src="assets/Con-Lo.png" width="1000" />
+</p>
+
+
+## 🔢 Customers' Behavior and Page Interaction Overview
 
 <p align="center">
-  <img src="assets/CustomerDash.png" width="1000" />
+  <img src="assets/Cus-Dash.png" width="1000" />
 </p>
 
 ### Top KPIs (Key Performance Indicators)
-- Total Customers: 10,000
-- Average Balance: $76,486
-- Products per Customer: 1.53 on average
-- Active Customers: 51.51%
-- Median Credit Score: 652
+- Total Users: 500
+- Total website Visits: 1079
+- Devices: 3
+- Locations: 3
+- Traffic Source: 5
+- Average Session Duration: 3.15 mins
 
-### 📊 Customer Segmentation: Analysis & Insights
-**1. By Location**
-- France has 50% (5,014) of the total customers.
-- Germany and Spain are almost equally represented (~25% each).
+### 📊 Customer Demographic
+**Key Insight**
+- Customer distribution shows 56% male and 44% female users, indicating a relatively balanced audience with a slight male dominance.
 
-**2. By Age Group & Gender**
-- Largest age segments:
-   - 35–44: 3,981 customers
-   - 25–34: 3,222 customers
-- Younger segment (<25) is the smallest: only 457 customers
-- Gender distribution is balanced across all age groups
+**Business Implication**
+- Marketing messaging may not be fully optimized for the different preferences of each customer segment.
 
-**3. By Credit Score Band**
-- Majority of customers have fair to poor credit:
-   - Fair (580–669): 3,331 customers
-   - Poor (<580): 2,362 customers
-   - Good (670–739): 2,428 customers
-- Only 655 customers have Excellent (800+) scores - just 6.5% of the base
+**Recommendation**
+- Introduce segment-specific marketing campaigns tailored to gender-based preferences
+- Personalize product recommendations and promotional messaging
 
-**4. By Number of Products**
-- Over 50% have only 1 product
-  - 5,084 (1 product)
-  - 4,590 (2 products)
-- Very few are using 3+ products
-
-**5. By Balance Band**
-- High Balance (100k–150k): 3,830 customers
-- Low Balance (<50k): 3,692 customers
-- Medium (50k-100k): 1,509 customers
-- Very High Balance (150k+): 969 customers
-- Most balances are clustered at the extremes - either low or high, suggesting a bimodal distribution
-
-
-### ⚠️ Key Challenges Identified
-**1. Low Active Engagement**
-- With only 51.51% active customers, nearly half of the customer base is disengaged or dormant.
-  - This may contribute significantly to the 20.37% churn rate.
-
-**2. Low Cross-Sell Penetration**
-- Over 95% of customers have 1–2 products
-  - Suggests missed opportunities for upselling/cross-selling additional financial services (loans, credit cards, investments, etc.)
-
-**3. Weak Credit Quality**
-- With a median credit score of 652 and 5,693 customers in Fair or Poor segments, the bank may be carrying higher credit risk.
-  - Could impact loan default rates and profitability if not managed
-
-
----
-
-
-## 📊 Churn & Risk Overview
-
-<p align="right">
-  <img src="assets/churn1.png" width="1000" />
+**Expected Impact**
+- Higher engagement and improved personalization effectiveness
+<p align="center">
+  <img src="assets/Cust-Gen.png" width="1000" />
 </p>
 
-### Top KPIs (Key Performance Indicators)
-- Churn Rate: 20.37%
-- No. of Customers churned: 2.037
-- Churned Balance: $186M
-- High-Risk Customers: 174
-- High-Value Churn Rate: 24.98%
-  - Key Risk: Nearly 25% of high-value customers churned, representing a significant financial loss and a priority focus area.
+### Customer Geographic Distribution
+**Key insight**
+- Canada: 176 users (largest audience)
+- USA: 166 users
+- United Kingdom: 158 users
 
-### 🌍 Churn by Location
+**Recommendation**
+- Maintain strong engagement strategies in Canada, where customer concentration is highest
+- Expand targeted campaigns in the USA and the United Kingdom to grow market share
 
-| Country         | Churn Rate   | Churned Balance    | Key Insight                               |
-|-----------------|--------------|--------------------|-------------------------------------------|
-| **Germany**     |     32%      |       $97.9M       | Highest churn rate and balance loss       |
-| **Spain**       |     17%      |       $29.9M       | Moderate churn, lower financial exposure  |
-| **France**      |     16%      |       $57.7M       | Lower churn rate, but large value impact  |
-
-⚠ Germany is a high-risk churn zone, both in terms of volume and financial value.
-
-### Churn by Customer Type
-**1. Active vs. Inactive**
-- Inactive customers account for 65% of churn, which is only 48% of the base.
-- Active customer churn rate = 35%, indicating even active users aren't fully engaged.
-
-**Actionable Insight:** Inactivity is a major churn predictor. There is a need to consider stronger lifecycle management.
-
-<p align="right">
-  <img src="assets/risk2.png" width="1000" />
+**Expected impact**
+- Improved regional marketing efficiency and international growth by 20%
+<p align="center">
+  <img src="assets/Cus-Loc.png" width="1000" />
 </p>
 
-### Churn by Product Usage
-| No. of Products    | Churn Rate    | No. of Churned     |
-|--------------------|-------------- |--------------------|
-|   1                |     28%       |        1,409       | 
-|   2                |     8%        |        348         |
-|   3                |     83%       |        220         | 
-|   4                |     100%      |        60          |
+## Device Usage Behavior
+**Key Insight**
+- Mobile accounts for the majority of users (57%)
+- Desktop contributes 39%, while tablet usage is minimal (4%).
 
-Customers with only 1 product are the largest churn group (1,409 customers).
+**Business Implication**
 
-**Caution**
+Most customers interact with BrightCart on mobile devices, making the mobile experience critical to conversion.
 
-The dataset shows a 100% churn rate for customers with four products. On investigation, this segment has a very small sample size, and all instances are labelled as churned. This appears to be a dataset artifact rather than a realistic banking behavior, so insights from this segment should be interpreted with caution. Strategic focus should remain on 1–3 product customers, where both volume and churn impact are material.
+**Recommendation**
+- Prioritize mobile-first website optimization
+- Improve mobile navigation, product page loading speed, and checkout flow
+- Optimize mobile promotional banners and CTAs
 
-### Churn by Age Group
-| Age Group       | Churn Rate    | No. of Churned                        |
-|-----------------|-------------- |---------------------------------------|
-|   45-54         |     48%       |  Extremely high churn risk            |
-|   55+           |     39%       |  Aging segment disengaging            |
-|   35-44         |     18%       |  Moderate risk                        | 
-|   <25           |     9%        |  Lower churn, oppourtunity to grow    |
-|   25-34         |     8%        |   Best-performing segment             |
-
-**Insight:** Mid-to-senior age customers are churning at 2-5x the rate of younger ones.
-
-### Churn by Credit Score Band
-| Credit Score Band       |  Churn Rate    |
-|-------------------------|----------------|
-|  Poor (<580)            |     22%        |
-|  Fair (580-669)         |     21%        |
-|  very Good (740-799)    |     21%        |
-|  Excellent (800+)       |     20%        |
-|  Good (670-739)         |     19%        |
-
-**Insight:**
-
-Churn is fairly consistent across credit bands, and no strong correlation between score and churn.
-
-### Churn Balance by Risk Tier
-
-| Risk Tier       |  Churned Balance  |
-|-----------------|-------------------|
-|  Medium         |     $106M         |
-|  low            |     $79.4M        |
-|  High           |     $0.2M         |
-
-**Insight:**
-- My analysis showed that customers at the highest churn risk tend to have lower balances, meaning they contribute less to direct financial loss.
-- The majority of revenue loss actually comes from medium-risk, higher-value customers.
-- This highlights the need for differentiated retention strategies.
-
-
----
-
-
-## Financial Performance Summary
-
-<p align="right">
-  <img src="assets/Summary.png" width="1000" />
+**Expected Impact**
+- Increased conversion rates from the largest user segment.
+<p align="center">
+  <img src="assets/Cust-Dev.png" width="1000" />
 </p>
 
-### KPIs Overview
-- Total Customers: 10,000
-- Churn Rate: 20.37% (2,037 customers churned)
-- Average Retain Balance: $72,745
-- Average Churn Balance: $91,109
-- Total Balance: $765M
-- Geographies: France, Germany, Spain
+## Traffic Source Performance
+**Business Implication**
+- Organic search is the most effective customer acquisition channel, while paid advertising and social channels contribute significantly less
 
-**Key Insights**
-**1. High Churn Rate**
-- A churn rate of 20.37% is relatively high, indicating a potential issue in customer retention.
-- The average balance of churned customers ($91,109) is higher than that of retained customers ($72,745), suggesting that higher-value customers are churning.
+**Recommendation**
+- Increase investment in SEO and content marketing
+- Optimize paid advertising targeting to improve acquisition efficiency
+- Strengthen referral partnerships to expand reach
 
-**2. Geographical Distribution**
-- Majority of customers are from:
-  - France: 5,014 (50.1%)
-  - Germany: 2,509 (25.1%)
-  - Spain: 2,477 (24.8%)
+**Expected Impact**
+- Potential to increase quality traffic with better conversion potential by 25% 
+<p align="center">
+  <img src="assets/Cust-Tra.png" width="1000" />
+</p>
 
-However, a filtered drill-down shows:
-- In Germany, customers under 25 years old, with medium churn risk, are notably present (96 customers).
-- Within this filtered segment, gender is almost equally split: 41 males, 36 females.
+## Website Page Interaction
+**Business Implication**
+- There may be friction in the purchase journey, preventing users from progressing smoothly from browsing to checkout.
 
-**3. Age Group Analysis**
-- Most customers fall into 35-44 and 25-34 age groups:
-  - 35-44: 3,278 retained
-  - 25-34: 2,972 retained
+**Recommendation**
+- Improve product detail page engagement with clearer descriptions, reviews, and images
+- Simplify the checkout process to reduce drop-offs
+- Introduce call-to-action prompts guiding users from product pages to purchase
 
-- However, <25 age group has the lowest retention (417) and churn (40) proportionally.
-- Suggests younger customers are more likely to churn.
-
-**4. Churn Risk Tiers**
-- Within the Germany/<25/Medium Risk segment:
-  - Most are in Medium Risk tier (77 out of 96).
-  - Low (14) and High (5) are negligible.
+**Expected Impact**
+- Improved customer journey flow
+- Increase purchase completion rates by 15%
+<p align="center">
+  <img src="assets/Cus-Pg.png" width="1000" />
+</p>
 
 
 ---
-
-
-## 🎯 Strategic Recommendations
-
-A. **Customer Retention Strategy**
-
-1. **Prioritize high-balance churners:**
-   - Since churned customers have higher average balances, create retention campaigns targeting high-value customers.
-   - Consider proactive outreach, loyalty rewards, or personalized financial advice.
-
-2. **Develop targeted interventions for medium-risk segments:**
-   - The largest risk category is medium. Launch "nudge" campaigns for this group to reduce the risk of escalation.
-   - Examples: financial planning tools, regular check-ins, or premium service trials.
-
-B. **Segment-Specific Strategies**
-
-1. **Adults (45-54 age group) and Seniors (55+ age group)**
-   - High churn and low retention indicate dissatisfaction or low engagement.
-   - Actions:
-     - Launch adults-focused products (e.g., retirement planning consultations, health savings-linked accounts, insurance bundles (health + life + critical illness)).
-     - Improve digital engagement (mobile banking, in-app "easy mode" interface).
-
-2. **Germany Segment**
-   - Customers <25 in Germany are showing churn behavior.
-   - Consider localized offers and customer engagement campaigns in Germany targeting this age group.
-
-C. **Geographic Focus**
-   - France has 50% of total customers – leverage this for upselling and cross-selling.
-   - Spain and Germany: Evaluate marketing ROI and retention performance to determine if higher engagement is needed.
-
-D. **Improve Churn Prediction & Early Warning**
-   - Use the existing churn risk tiers to build a predictive churn model based on:
-     - Age
-     - Geography
-     - Gender
-     - Credit Score
-     - Product usage
-     - Balance trends
-   - Focus on medium-risk segments and monitor any increase in early warning indicators.
-
-E. **Financial Impact Monitoring**
-   - Given that high churners have higher balances:
-     - Quantify potential revenue loss from churn and build a business case for investing in retention programs.
-     - Use dashboards to track CLV (Customer Lifetime Value) over time by segment.
-
-### Next Steps
-
-1. **Deep dive into churn drivers:** Survey churned customers, analyze product usage data.
-
-2. **Build retention models:** Use machine learning (e.g., logistic regression, random forest) to predict churn risk.
-
-3. **Refine segmentation:** Include behavioral data (transaction volume, complaints, digital activity).
-
-4. **Test retention offers:** A/B test targeted campaigns for high-value and medium-risk customers.
-
-5. **Monitor KPIs monthly:** Add trend charts for churn rate, NPS, and retention by geography and age.
-
-
----
-
-🔗 [View the Live Dashboard](https://bit.ly/UnityBank_Customer_Churn_Risk)
 
 
 ## Executive Summary
 
-This Power BI analytics solution provides Unity Bank with a comprehensive, data-driven view of its customer base, financial exposure, and churn risk. By leveraging the full capabilities of Power BI from data transformation to advanced DAX measures and interactive dashboards, the project delivers actionable insights that directly support customer retention, revenue protection, and risk mitigation efforts.
+This analysis of BrightCart’s website traffic, customer behavior, and conversion performance identifies several opportunities to strengthen marketing effectiveness and improve overall sales outcomes. The dashboard insights reveal that user engagement and conversion patterns vary across different time periods, traffic sources, devices, and browsing behaviors. These findings highlight the importance of adopting a more data-driven approach to marketing strategy and customer experience optimization.
 
-This analysis reveals that Unity Bank is facing a critical customer churn challenge, with over 20% of customers exiting and a disproportionately high churn among medium-risk and high-balance clients. Inactivity, low product penetration, and regional concentration (notably in Germany) emerge as leading indicators of churn. Additionally, the bank’s current churn risk tiering underestimates the risk posed by medium-tier customers, who account for the largest share of churned balance value.
+Key insights from the analysis show that:
 
-The dashboards empower stakeholders to explore these dynamics through real-time, filterable views segmented by geography, age, credit score, product usage, and churn risk. This enables business leaders to move from reactive churn tracking to proactive customer engagement and risk prevention.
+- Traffic and conversion performance vary significantly by time of day, acquisition channel, and device type
+- Organic Search and Direct traffic consistently drive the highest engagement and strong conversion performance
+- Mobile users represent the majority of website visitors, emphasizing the importance of mobile-first optimization
+- Product detail pages show relatively low engagement, indicating gaps in the customer purchase journey
+- Improving the transition from product discovery to checkout presents an opportunity to increase overall conversion rates
+
 
 ## Executive Recommendation
 
-Unity Bank should implement a **targeted, data-driven customer retention strategy** focused on the following priorities:
+**BrightCart** should implement a **targeted, data-driven strategy** focused on the following priorities:
 
-1. **Prioritize Medium-Risk and High-Balance Customers**  
-   - Proactively monitor and engage medium-risk customers, especially those with high balances, using early-warning signals from the dashboard.
+1. Strengthen **SEO and organic content strategies** to sustain high-performing traffic channels
 
-2. **Reactivate Inactive Customers**  
-   - Launch re-engagement campaigns and personalized offers for inactive users, who represent a large portion of churned customers.
+2. Invest in **brand-driven initiatives** that encourage direct website visits
 
-3. **Increase Product Penetration to Reduce Churn**  
-   - Design bundled product offerings and personalized cross-sell strategies to encourage customers with only one product to deepen their relationship with the bank.
+3. Adopt a **mobile-first optimization strategy** to improve browsing, navigation, and checkout experience
 
-4. **Localize Retention Strategies by Region**  
-   - Tailor retention and service strategies for high-churn regions like Germany, where customer behavior significantly deviates from the rest of the portfolio.
+4. Enhance **product discovery and product detail pages** to encourage deeper engagement before purchase
 
-5. **Refine Risk Scoring Models**  
-   - Update churn risk models to reflect actual behavioral drivers found in the data, such as inactivity, single product ownership, and regional trends, to improve prediction accuracy.
+5. Align **marketing campaigns with peak engagement periods** to maximize conversion opportunities
 
-By implementing these actions, Unity Bank can significantly reduce churn, improve customer lifetime value, and drive sustainable revenue growth through smarter, insight-led decisions.
-
-
----
-
-
-## Disclaimer
-This project is for portfolio and educational display only.
-
-No content may be reused without permission.
+By leveraging these insights, **BrightCart** can improve marketing efficiency, optimize customer experience, and increase conversion performance while supporting sustainable growth in a competitive online retail environment.
 
 
 ---
