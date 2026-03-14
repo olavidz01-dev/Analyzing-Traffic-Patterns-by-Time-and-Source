@@ -1,5 +1,5 @@
-# Analyzing-Traffic-Patterns-by-Time-and-Source
-This project analyzed customer demographics, traffic patterns, and website conversion rates of **BrightCart** Online Retail store. 
+# E-Commerce Traffic & Marketing Performance Analysis
+This project is an analysis of traffic, customer behavior & conversions of **BrightCart** Website 
 <p align="center">
   <img src="assets/Cover.png" width="1000" />
 </p>
